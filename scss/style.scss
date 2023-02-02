@@ -5,6 +5,17 @@ $color-paragraph: #3d3d4e;
 $color-accent: #3BC7DA;
 
 
+@mixin mask-icon{
+    display: block;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center center;
+    -webkit-mask-position: center center;
+    transition: background-color 0.15s ease;
+}
+
 *, *::before, *::after{
     box-sizing: border-box;
 }
@@ -67,6 +78,11 @@ h2, h3, h4, h5, h6{
     font-size: 24px;
     line-height: 1.25;
     text-decoration: underline;
+    transition: all 0.15s ease;
+
+    &:hover{
+        color: $color-titles;
+    }
 
     &.button{
         background-color: $color-accent;
@@ -81,6 +97,10 @@ h2, h3, h4, h5, h6{
         width: max-content;
         cursor: pointer;
         text-decoration: none;
+
+        &:hover{
+            background-color: $color-titles;
+        }
 
         &.addcart{
             display: none;
@@ -131,7 +151,7 @@ h2, h3, h4, h5, h6{
     align-items: center;
 }
 
-.language-menu .control{
+.language-menu{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -139,6 +159,10 @@ h2, h3, h4, h5, h6{
 
 .topnav-menu{
     border-right: 3px solid rgb(134, 134, 134);
+
+    & a{
+        transition: color 0.15s ease;
+    }
 }
 
 .topnav-menu ul{
@@ -149,6 +173,46 @@ h2, h3, h4, h5, h6{
 .top-interactive-menu{
     padding-left: 30px;
     gap: 30px;
+    
+    & button{
+        font-size: inherit;
+        font-family: inherit;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    & button:hover .icon{
+        background-color: $color-accent;
+    }
+
+    & .icon{
+        background-color: $color-titles;
+        width: 24px;
+        height: 24px;
+        @include mask-icon();
+    }
+    
+    & .arrow-icon{
+        mask-image: url(../images/icon-arrow-down.svg);
+        -webkit-mask-image: url(../images/icon-arrow-down.svg);
+        
+    }
+    
+    & .search-icon{
+        mask-image: url(../images/icon-search.svg);
+        -webkit-mask-image: url(../images/icon-search.svg);
+
+    }
+    & .shopcart-icon{
+        mask-image: url(../images/shopping-bag.svg);
+        -webkit-mask-image: url(../images/shopping-bag.svg);
+
+    }
+}
+
+.topnav-menu a:hover{
+    color: $color-accent;
 }
 
 //PROMO-SCREEN
@@ -209,6 +273,12 @@ h2, h3, h4, h5, h6{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.15s ease;
+
+    &:hover{
+        border: 1px solid $color-accent;
+        box-shadow: inset 0px 0px 8px rgba($color: #31a5b4, $alpha: 0.1);
+    }
 }
 
 //ABOUT
@@ -336,6 +406,20 @@ h2, h3, h4, h5, h6{
 }
 
 
+.link-out i{
+    width: 32px;
+    height: 32px;
+    
+    background-color: $color-accent;
+    mask-image: url(../images/icon-link-out1.svg);
+    -webkit-mask-image: url(../images/icon-link-out1.svg);
+    @include mask-icon();
+}
+.link-out:hover i{
+    background-color: #0d0c22;
+}
+
+
 
 .item-rating-container{
     display: flex;
@@ -361,7 +445,7 @@ h2, h3, h4, h5, h6{
 
     &.stars-active-wrapper{
         overflow: hidden;
-        width: 65%;
+        width: 30%;
     }
 }
 
@@ -468,9 +552,6 @@ h2, h3, h4, h5, h6{
     height: max-content;
 }
 
-.review-text-content{
-    
-}
 
 .review .title-wrapper{
     text-align-last: left;
@@ -486,9 +567,6 @@ h2, h3, h4, h5, h6{
     margin-bottom: 45px;
 }
 
-.review .vector-decor{
-    // position: absolute;
-}
 
 .quote-icon{
     margin-bottom: 40px;
@@ -550,10 +628,18 @@ h2, h3, h4, h5, h6{
         height: 70px;
         cursor: pointer;
         font-size: 30px;
+        transition: all 0.2s ease-out;
+
+        
     }
     & .review-arrow.right{
         background-color: $color-accent;
         color: white;
+    }
+
+    .review-arrow:hover{
+        color: white;
+        background-color: $color-titles;
     }
 }
 
@@ -596,14 +682,20 @@ h2, h3, h4, h5, h6{
         width: 100%;
     }
 
+    & .email-input-wrapper{
+        position: relative;
+    }
+    
     & .email{
-        background: transparent;
+        background-color: transparent;
         border: 1px solid $color-accent;
         font-family: inherit;
         color: inherit;
         font-size: inherit;
         padding: 1em 1em;
+        
     }
+    
 }
 
 .news .footer-navigation-container{
@@ -644,6 +736,9 @@ h2, h3, h4, h5, h6{
         flex-wrap: nowrap;
         flex: 1 0 auto;
 
+        & a:hover{
+            color: $color-accent;
+        }
     }
 
     .social-icons-wrapper ul{
