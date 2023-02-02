@@ -69,13 +69,18 @@ h2, h3, h4, h5, h6{
     text-decoration: underline;
 
     &.button{
+        background-color: $color-accent;
+        border: none;
         color: white;
+        display: inline-block;
         font-family: 'PT Serif', serif;
         font-size: 18px;
         font-weight: 700;
         line-height: 30px;
-        background-color: $color-accent;
         padding: 1em 2em;
+        width: max-content;
+        cursor: pointer;
+        text-decoration: none;
 
         &.addcart{
             display: none;
@@ -88,7 +93,12 @@ h2, h3, h4, h5, h6{
             position: absolute;
             top: 100%;
             left: 100%;
+            transform: translate(-100%, -100%);
         }
+    }
+
+    &.button:hover{
+        text-decoration: underline;
     }
 }
 
@@ -102,8 +112,9 @@ h2, h3, h4, h5, h6{
 
 .header{
     background-color: $color-section-bg;
-
+    
     &-inner{
+        height: 95px;
         display: flex;
         align-items: center;
         justify-content: start;
@@ -123,6 +134,21 @@ h2, h3, h4, h5, h6{
 .language-menu .control{
     display: flex;
     align-items: center;
+    gap: 10px;
+}
+
+.topnav-menu{
+    border-right: 3px solid rgb(134, 134, 134);
+}
+
+.topnav-menu ul{
+    gap: 30px;
+    padding-right: 30px;
+}
+
+.top-interactive-menu{
+    padding-left: 30px;
+    gap: 30px;
 }
 
 //PROMO-SCREEN
@@ -151,7 +177,7 @@ h2, h3, h4, h5, h6{
 
 .partners{
     background-color: $color-section-bg;
-
+    padding: 55px 0px;
     &-inner{
         display: flex;
         flex-direction: column;
@@ -159,17 +185,47 @@ h2, h3, h4, h5, h6{
     }
 }
 
+.partners .title-wrapper{
+    margin-bottom: 50px;
+}
+
 .partners-container{
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 25px;
 }
 
 .partners-item{
     flex: 1 1 auto;
 }
 
+.partners-item-link{
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid rgb(209, 209, 209);
+    height: 95px;
+    width: auto;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 //ABOUT
+
+
+.about{
+    padding-top: 55px;
+}
+
+.about .title-wrapper{
+    margin-bottom: 45px;
+    text-align-last: left;
+}
+
+.about > .textbox{
+    margin-bottom: 45px;
+}
 
 .about .text-content-wrapper{
     display: flex;
@@ -181,6 +237,14 @@ h2, h3, h4, h5, h6{
 
     }
 
+    & .company-stats-container .company-stats-item{
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     & .company-stats-item > *{
         display: inline-block;
     }
@@ -214,15 +278,33 @@ h2, h3, h4, h5, h6{
 
 //NEW PRODUCTS
 
+.new-products{
+    padding-top: 150px;
+}
+
+.new-products .title-wrapper{
+    margin-bottom: 65px;
+}
+
+.new-products .grid-content{
+    gap: 30px;
+}
+
 .new-products-item{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 }
 
 .new-products-item .image-wrapper{
+    flex: 1 1 auto;
     position: relative;
 
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+    
     &:hover > .cta-link.button.addcart{
         display: block;
     }
@@ -241,6 +323,11 @@ h2, h3, h4, h5, h6{
 
 }
 
+.item-title-wrapper{
+    border-bottom: 1px solid #ccc;
+    padding: 25px 0px;
+}
+
 .item-descr span{
     color: $color-paragraph;
     font-weight: 400;
@@ -250,10 +337,18 @@ h2, h3, h4, h5, h6{
 
 
 
-
+.item-rating-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
 
 .star-rating{
+    display: block;
     position: relative;
+    height: 20px;
+    width: 100px;
 }
 
 .stars-wrapper{
@@ -262,21 +357,20 @@ h2, h3, h4, h5, h6{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: auto;
+    height: 20px;
 
     &.stars-active-wrapper{
         overflow: hidden;
-        width: 100%;
+        width: 65%;
     }
 }
 
 .star{
     background-repeat: no-repeat;
-    background-size: cover;
-    display: block;
+    background-size: contain;
+    display: inline-block;
     height: auto;
-    width: 20px;
+    flex: 1 0 20px;
 }
 
 .star-inactive{
@@ -286,8 +380,39 @@ h2, h3, h4, h5, h6{
     background-image: url(../images/icon-star-rating.svg);
 }
 
+.rating-count span{
+    display: inline-block;
+}
 
 
+.popular{
+    padding: 150px 0px;
+}
+
+.popular .title-wrapper{
+    margin-bottom: 65px;
+    text-align-last: left;
+}
+
+.popular .grid-content{
+    gap: 30px;
+}
+
+.popular .grid-content .new-products-item:nth-child(1){
+    grid-column: 1 / span 2;
+}
+
+
+
+.booking{
+    background-color: $color-section-bg;
+    background-image: url(../images/woman-before-after.jpg);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;    
+    padding-top: 80px;
+    padding-bottom: 195px;
+}
 
 .booking .image-wrapper{
     position: relative;
@@ -319,28 +444,67 @@ h2, h3, h4, h5, h6{
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    & .title-wrapper{
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    & .textbox{
+        margin-bottom: 40px;
+    }
 }
 
 .review{
     position: relative;
+    // padding-top: 150px;
+    padding: 150px 0px;
+}
+
+.review-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
+    height: max-content;
+}
+
+.review-text-content{
+    
 }
 
 .review .title-wrapper{
     text-align-last: left;
+    margin-bottom: 50px;
 }
 
-.review .illustraiton{
-    float: left;
-    height: 100%;
+
+.review .illustration{
+    display: block;
+}
+
+.review .textbox{
+    margin-bottom: 45px;
 }
 
 .review .vector-decor{
-    position: absolute;
+    // position: absolute;
 }
+
+.quote-icon{
+    margin-bottom: 40px;
+}
+
 
 .review .reviewer-info{
     display: flex;
+    flex-direction: column;
     justify-content: start;
+    margin-bottom: 25px;
+
+    & .reviewer-info-row1{
+        display: flex;
+        margin-bottom: 10px;
+    }
 
     & .reviewer-name{
         font-weight: 700;
@@ -362,6 +526,7 @@ h2, h3, h4, h5, h6{
 }
 
 .review .review-count{
+    color: $color-paragraph;
     font-family: 'PT Serif', serif;
     font-size: 24px;
     font-weight: 700;
@@ -375,7 +540,7 @@ h2, h3, h4, h5, h6{
     display: flex;
     justify-content: space-between;
     gap: 20px;
-
+    
     & .review-arrow{
         background-color: white;
         border: 1px solid $color-accent;
@@ -384,6 +549,7 @@ h2, h3, h4, h5, h6{
         width: 70px;
         height: 70px;
         cursor: pointer;
+        font-size: 30px;
     }
     & .review-arrow.right{
         background-color: $color-accent;
@@ -394,7 +560,9 @@ h2, h3, h4, h5, h6{
 
 .news{
     background-color: $color-footer-bg;
+    clear: both;
     color: white;
+    padding: 60px 200px 45px;
 
     display: flex;
     flex-direction: column;
@@ -403,6 +571,15 @@ h2, h3, h4, h5, h6{
 
 .news .title-wrapper{
     color: $color-accent;
+    margin-bottom: 35px;
+}
+
+.news .news-subtitle{
+    margin-bottom: 60px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
 }
 
 .news .news-form{
@@ -411,14 +588,21 @@ h2, h3, h4, h5, h6{
     align-items: center;
     gap: 30px;
     
-    max-width: 500px;
+    min-width: 500px;
+    max-width: 900px;
+    margin-bottom: 100px;
 
     & *{
         width: 100%;
     }
 
     & .email{
+        background: transparent;
         border: 1px solid $color-accent;
+        font-family: inherit;
+        color: inherit;
+        font-size: inherit;
+        padding: 1em 1em;
     }
 }
 
@@ -426,12 +610,17 @@ h2, h3, h4, h5, h6{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-bottom: 120px;
 
     & .footer-navigation ul{
         display: flex;
         align-items: center;
+        gap: 30px;
 
         & li a{
+            font-size: 24px;
+            line-height: 32px;
             color: white;
 
             &:hover{
@@ -443,20 +632,28 @@ h2, h3, h4, h5, h6{
 
 .news .socials-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 100%;
 
     & > div{
         flex: 1 0 calc(100%/3);
     }
 
+    .copyright-wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 1 0 auto;
+
+    }
+
     .social-icons-wrapper ul{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 10px;
+        justify-content: flex-end;
+        gap: 15px;
 
         & img{
-            height: 25px;
+            height: 40px;
             width: auto;
             display: inline-block;
         }
