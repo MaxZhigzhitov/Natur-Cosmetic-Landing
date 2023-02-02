@@ -1,3 +1,124 @@
 *, *::before, *::after { box-sizing: border-box; }
 
-body { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; font-family: 'Playfair Display', serif; }
+
+ul { list-style: none; }
+
+a { color: inherit; text-decoration: none; }
+
+h1 { font-weight: 800; font-size: 68px; line-height: 80px; }
+
+h2, h3, h4, h5, h6 { font-weight: 600; font-size: 46px; line-height: 56px; }
+
+.title-wrapper { display: block; width: 100%; text-align: center; }
+
+.textbox { color: #3d3d4e; font-weight: 400; font-size: 18px; line-height: 1.4; }
+
+.text-underline { text-decoration: underline; }
+
+.cta-link { color: #3BC7DA; font-weight: 800; font-size: 24px; line-height: 1.25; text-decoration: underline; }
+.cta-link.button { color: white; font-family: 'PT Serif', serif; font-size: 18px; font-weight: 700; line-height: 30px; background-color: #3BC7DA; padding: 1em 2em; }
+.cta-link.button.addcart { display: none; font-family: 'PT Sans Narrow', sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; position: absolute; top: 100%; left: 100%; }
+
+.wrapper { max-width: 1160px; margin: 0 auto; }
+
+.header { background-color: #f8f8f8; }
+.header-inner { display: flex; align-items: center; justify-content: start; }
+
+.header .logo-wrapper { margin-right: auto; }
+
+.topnav-menu ul, .top-interactive-menu { display: flex; justify-content: space-between; align-items: center; }
+
+.language-menu .control { display: flex; align-items: center; }
+
+.promo-screen { background-image: url(../images/promo-screen-woman-face.jpg); background-repeat: no-repeat; background-size: contain; background-position: left center; }
+
+.promo-screen-content { display: flex; flex-direction: column; gap: 25px 0px; padding-left: 45%; padding-top: 100px; padding-bottom: 50px; }
+.promo-screen-content .cta-link.button { margin-bottom: 190px; }
+
+.partners { background-color: #f8f8f8; }
+.partners-inner { display: flex; flex-direction: column; align-items: center; }
+
+.partners-container { display: flex; justify-content: space-between; gap: 20px; }
+
+.partners-item { flex: 1 1 auto; }
+
+.about .text-content-wrapper { display: flex; flex-direction: column; }
+.about .text-content-wrapper .company-stats-container { display: flex; flex-direction: column; }
+.about .text-content-wrapper .company-stats-item > * { display: inline-block; }
+.about .text-content-wrapper .stats-value { color: #3BC7DA; font-size: 32px; line-height: 48px; font-weight: 800; }
+.about .text-content-wrapper .stats-descr { font-size: 20px; line-height: 30px; font-weight: 600; }
+
+.grid-content { display: grid; }
+.grid-content.col-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-content.col-3 { grid-template-columns: repeat(3, 1fr); }
+
+.new-products-item { display: flex; flex-direction: column; align-items: center; }
+
+.new-products-item .image-wrapper { position: relative; }
+.new-products-item .image-wrapper:hover > .cta-link.button.addcart { display: block; }
+
+.item-title-wrapper, .item-price-wrapper .item-price-container { display: flex; justify-content: space-between; }
+
+.item-title-wrapper .item-title, .item-price-wrapper .item-price { font-size: 24px; font-weight: 700; line-height: 32px; }
+
+.item-descr span { color: #3d3d4e; font-weight: 400; font-size: 16px; line-height: 22px; }
+
+.star-rating { position: relative; }
+
+.stars-wrapper { display: flex; justify-content: space-between; position: absolute; top: 0; left: 0; width: 100%; height: auto; }
+.stars-wrapper.stars-active-wrapper { overflow: hidden; width: 100%; }
+
+.star { background-repeat: no-repeat; background-size: cover; display: block; height: auto; width: 20px; }
+
+.star-inactive { background-image: url(../images/icon-star-rating-inactive.svg); }
+
+.star-active { background-image: url(../images/icon-star-rating.svg); }
+
+.booking .image-wrapper { position: relative; }
+.booking .image-wrapper .image-caption { position: absolute; }
+.booking .image-wrapper .image-caption:nth-child(1), .booking .image-wrapper .image-caption:nth-child(2) { top: 15px; }
+.booking .image-wrapper .image-caption:nth-child(1) { left: 10%; }
+.booking .image-wrapper .image-caption:nth-child(2) { left: 70%; }
+.booking .image-wrapper .image-caption:nth-child(3) { top: 100%; left: 50%; transform: translateX(-50%); }
+
+.booking .text-content-wrapper { display: flex; flex-direction: column; align-items: start; }
+
+.review { position: relative; }
+
+.review .title-wrapper { text-align-last: left; }
+
+.review .illustraiton { float: left; height: 100%; }
+
+.review .vector-decor { position: absolute; }
+
+.review .reviewer-info { display: flex; justify-content: start; }
+.review .reviewer-info .reviewer-name { font-weight: 700; margin-right: 15px; }
+.review .reviewer-info span { color: #3d3d4e; font-size: 16px; font-weight: 400; line-height: 22px; }
+
+.review .review-pagination { display: flex; justify-content: space-between; align-items: center; }
+
+.review .review-count { font-family: 'PT Serif', serif; font-size: 24px; font-weight: 700; }
+.review .review-count span:nth-child(1) { color: #3BC7DA; }
+
+.review .review-controls { display: flex; justify-content: space-between; gap: 20px; }
+.review .review-controls .review-arrow { background-color: white; border: 1px solid #3BC7DA; color: #3BC7DA; display: block; width: 70px; height: 70px; cursor: pointer; }
+.review .review-controls .review-arrow.right { background-color: #3BC7DA; color: white; }
+
+.news { background-color: #04010e; color: white; display: flex; flex-direction: column; align-items: center; }
+
+.news .title-wrapper { color: #3BC7DA; }
+
+.news .news-form { display: flex; flex-direction: column; align-items: center; gap: 30px; max-width: 500px; }
+.news .news-form * { width: 100%; }
+.news .news-form .email { border: 1px solid #3BC7DA; }
+
+.news .footer-navigation-container { display: flex; justify-content: space-between; align-items: center; }
+.news .footer-navigation-container .footer-navigation ul { display: flex; align-items: center; }
+.news .footer-navigation-container .footer-navigation ul li a { color: white; }
+.news .footer-navigation-container .footer-navigation ul li a:hover { color: #3BC7DA; }
+
+.news .socials-container { display: flex; justify-content: space-evenly; }
+.news .socials-container > div { flex: 1 0 calc(100%/3); }
+.news .socials-container .social-icons-wrapper ul { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.news .socials-container .social-icons-wrapper ul img { height: 25px; width: auto; display: inline-block; }

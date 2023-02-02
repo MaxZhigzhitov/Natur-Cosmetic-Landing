@@ -12,110 +12,121 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Serif:wght@400;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header" id="header">
-      <div class="wrapper header-wrapper">
-        <div class="logo-wrapper">
-          <a href="#">
-            <img src="images/braVaa.svg" alt="company logo image" />
-          </a>
-        </div>
-        <nav class="topnav-menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contacts</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-        </nav>
-        <div class="top-interactive-menu">
-          <div class="language-menu">
-            <span class="control language-control">
-              <div>En</div>
-              <img src="images/icon-arrow-down.svg" alt="" />
-            </span>
+      <div class="wrapper">
+        <div class="header-inner">
+          <div class="logo-wrapper">
+            <a href="#">
+              <img src="images/braVaa.svg" alt="company logo image" />
+            </a>
           </div>
-          <div class="search-menu">
-            <span class="control search-control">
-              <img src="images/icon-search.svg" alt="serach icon" />
-            </span>
-          </div>
-          <div class="shopcart-menu">
-            <span class="control shopcart-control">
-              <img src="images/shopping-bag.svg" alt="go to cart icon" />
-            </span>
+          <nav class="topnav-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contacts</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </nav>
+          <div class="top-interactive-menu">
+            <div class="language-menu">
+              <div class="control language-control">
+                <div>En</div>
+                <img src="images/icon-arrow-down.svg" alt="" />
+              </div>
+            </div>
+            <div class="search-menu">
+              <div class="control search-control">
+                <img src="images/icon-search.svg" alt="serach icon" />
+              </div>
+            </div>
+            <div class="shopcart-menu">
+              <div class="control shopcart-control">
+                <img src="images/shopping-bag.svg" alt="go to cart icon" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
     <section class="promo-screen" id="promo-screen">
-      <!-- float left it -->
-      <img
-        src="images/promo-screen-woman-face.jpg"
-        alt="a woman behind a greenleaf"
-      />
-      <!-- --- -->
-
-      <div class="promo-screen-content">
-        <h1 class="title title-h1">
-          <img src="images/vector-deco-spiral2.svg" alt="" />
-          Natural Cosmetic For Every Skin
-        </h1>
-        <div class="textbox">
-          <div>
-            Trend sari minimalist sleeveless modern valuable. celebrities
-            photography. Influence imprint replicate minimalist apron .
+      <div class="wrapper">
+        <div class="promo-screen-content">
+          <h1 class="title title-h1">
+            <img src="images/vector-deco-spiral2.svg" alt="" />
+            Natural Cosmetic For Every Skin
+          </h1>
+          <div class="textbox">
+            <p>
+              Trend sari minimalist sleeveless modern valuable. celebrities
+              photography. Influence imprint replicate minimalist apron .
+            </p>
           </div>
+          <a class="cta-link button" href="#">Shop Now &rarr;</a>
+          <a class="cta-link" href="#">View All Products &rarr;</a>
         </div>
-        <a class="cta-link button" href="#">Shop Now</a>
-        <a class="cta-link" href="#">View All Products &rarr;</a>
       </div>
     </section>
+
     <section class="partners" id="partners">
       <div class="wrapper">
-        <div class="title-wrapper">
-          <h2 class="title title-h2">Our trusted partners</h2>
-        </div>
-        <div class="partners-item-wrapper">
-          <a class="partners-item-link" href="#">
-            <div
-              class="partners-item"
-              style="background-image: url(images/partner-microsoft.jpg)"
-            ></div>
-          </a>
-          <a class="partners-item-link" href="#">
-            <div
-              class="partners-item"
-              style="background-image: url(images/partner-unbounce.jpg)"
-            ></div>
-          </a>
-          <a class="partners-item-link" href="#">
-            <div
-              class="partners-item"
-              style="background-image: url(images/partner-amazon.jpg)"
-            ></div>
-          </a>
-          <a class="partners-item-link" href="#">
-            <div
-              class="partners-item"
-              style="background-image: url(images/partner-sky.jpg)"
-            ></div>
-          </a>
-          <a class="partners-item-link" href="#">
-            <div
-              class="partners-item"
-              style="background-image: url(images/partner-google.jpg)"
-            ></div>
-          </a>
+        <div class="partners-inner">
+          <div class="title-wrapper">
+            <h2 class="title title-h2">Our trusted partners</h2>
+          </div>
+          <div class="partners-container">
+            <div class="partners-item">
+              <a class="partners-item-link" href="#">
+                <div
+                  class="partners-item-image"
+                  style="background-image: url(images/partner-microsoft.jpg)"
+                ></div>
+              </a>
+            </div>
+            <div class="partners-item">
+              <a class="partners-item-link" href="#">
+                <div
+                  class="partners-item-image"
+                  style="background-image: url(images/partner-unbounce.jpg)"
+                ></div>
+              </a>
+            </div>
+            <div class="partners-item">
+              <a class="partners-item-link" href="#">
+                <div
+                  class="partners-item-image"
+                  style="background-image: url(images/partner-amazon.jpg)"
+                ></div>
+              </a>
+            </div>
+            <div class="partners-item">
+              <a class="partners-item-link" href="#">
+                <div
+                  class="partners-item-image"
+                  style="background-image: url(images/partner-sky.jpg)"
+                ></div>
+              </a>
+            </div>
+            <div class="partners-item">
+              <a class="partners-item-link" href="#">
+                <div
+                  class="partners-item-image"
+                  style="background-image: url(images/partner-google.jpg)"
+                ></div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="wrapper">
+    <div class="wrapper">
+      <section class="about" id="about">
         <div class="title-wrapper">
           <h2 class="title title-h2">About Us</h2>
         </div>
@@ -130,7 +141,7 @@
           </p>
         </div>
 
-        <div class="grid-content 2-col">
+        <div class="grid-content col-2">
           <div class="image-wrapper">
             <img src="images/content-image-flacon.jpg" alt="a flacon in hand" />
           </div>
@@ -160,382 +171,555 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="new-products" id="new-products">
+      </section>
+      <section class="new-products" id="new-products">
+        <div class="title-wrapper">
+          <h2 class="title title-h2">New Arrival Collection</h2>
+        </div>
+        <div class="grid-content col-3">
+          <div class="new-products-item">
+            <div class="image-wrapper">
+              <img
+                src="images/shop-item-image1.jpg"
+                alt="4 flacons of skin care products"
+              />
+              <button class="cta-link button addcart">Add To Cart</button>
+            </div>
+            <div class="item-descr">
+              <div class="item-title-wrapper">
+                <div class="item-title">Skin Care</div>
+                <div class="item-rating-container">
+                  <div class="star-rating">
+                    <div class="stars-wrapper stars-inactive-wrapper">
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                    </div>
+                    <div class="stars-wrapper stars-active-wrapper">
+                      <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+                      <i class="star stars-wrapper star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                    </div>
+                  </div>
+                  <div class="rating-count">
+                    <span>234</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-price-wrapper">
+                <span>From</span>
+                <div class="item-price-container">
+                  <div class="item-price">$99.00</div>
+                  <a class="link-out" href="#"
+                    ><img
+                      src="images/icon-link-out.svg"
+                      alt="link to outer page"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="new-products-item">
+            <div class="image-wrapper">
+              <img
+                src="images/shop-item-image2.jpg"
+                alt="4 flacons of skin care products"
+              />
+              <button class="cta-link button addcart">Add To Cart</button>
+            </div>
+            <div class="item-descr">
+              <div class="item-title-wrapper">
+                <div class="item-title">Hair Care</div>
+                <div class="item-rating-container">
+                  <div class="star-rating">
+                    <div class="stars-wrapper stars-inactive-wrapper">
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                    </div>
+                    <div class="stars-wrapper stars-active-wrapper">
+                      <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                    </div>
+                  </div>
+                  <div class="rating-count">
+                    <span>234</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-price-wrapper">
+                <span>From</span>
+                <div class="item-price-container">
+                  <div class="item-price">$75.00</div>
+                  <a class="link-out" href="#"
+                    ><img
+                      src="images/icon-link-out.svg"
+                      alt="link to outer page"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="new-products-item">
+            <div class="image-wrapper">
+              <img
+                src="images/shop-item-image3.jpg"
+                alt="4 flacons of skin care products"
+              />
+              <button class="cta-link button addcart">Add To Cart</button>
+            </div>
+            <div class="item-descr">
+              <div class="item-title-wrapper">
+                <div class="item-title">Facial Care</div>
+                <div class="item-rating-container">
+                  <div class="star-rating">
+                    <div class="stars-wrapper stars-inactive-wrapper">
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                    </div>
+                    <div class="stars-wrapper stars-active-wrapper">
+                      <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                    </div>
+                  </div>
+                  <div class="rating-count">
+                    <span>234</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-price-wrapper">
+                <span>From</span>
+                <div class="item-price-container">
+                  <div class="item-price">$88.00</div>
+                  <a class="link-out" href="#"
+                    ><img
+                      src="images/icon-link-out.svg"
+                      alt="link to outer page"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular" id="popular">
+        <div class="title-wrapper">
+          <h2 class="title title-h2">Our Beautiful Products</h2>
+        </div>
+        <div class="grid-content col-3">
+          <div class="new-products-item">
+            <div class="image-wrapper">
+              <img
+                src="images/shop-item-image4.jpg"
+                alt="4 flacons of skin care products"
+              />
+              <button class="cta-link button addcart">Add To Cart</button>
+            </div>
+            <div class="item-descr">
+              <div class="item-title-wrapper">
+                <div class="item-title">Body Sprays</div>
+                <div class="item-rating-container">
+                  <div class="star-rating">
+                    <div class="stars-wrapper stars-inactive-wrapper">
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                    </div>
+                    <div class="stars-wrapper stars-active-wrapper">
+                      <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                    </div>
+                  </div>
+                  <div class="rating-count">
+                    <span>234</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-price-wrapper">
+                <span>From</span>
+                <div class="item-price-container">
+                  <div class="item-price">$99.00</div>
+                  <a class="link-out" href="#"
+                    ><img
+                      src="images/icon-link-out.svg"
+                      alt="link to outer page"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="new-products-item">
+            <div class="image-wrapper">
+              <img
+                src="images/shop-item-image5.jpg"
+                alt="4 flacons of skin care products"
+              />
+              <button class="cta-link button addcart">Add To Cart</button>
+            </div>
+            <div class="item-descr">
+              <div class="item-title-wrapper">
+                <div class="item-title">Special Product</div>
+                <div class="item-rating-container">
+                  <div class="star-rating">
+                    <div class="stars-wrapper stars-inactive-wrapper">
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                    </div>
+                    <div class="stars-wrapper stars-active-wrapper">
+                      <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                    </div>
+                  </div>
+                  <div class="rating-count">
+                    <span>234</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-price-wrapper">
+                <span>From</span>
+                <div class="item-price-container">
+                  <div class="item-price">$78.00</div>
+                  <a class="link-out" href="#"
+                    ><img
+                      src="images/icon-link-out.svg"
+                      alt="link to outer page"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="new-products-item">
+            <div class="image-wrapper">
+              <img
+                src="images/shop-item-image6.jpg"
+                alt="4 flacons of skin care products"
+              />
+              <button class="cta-link button addcart">Add To Cart</button>
+            </div>
+            <div class="item-descr">
+              <div class="item-title-wrapper">
+                <div class="item-title">Body Lotion</div>
+                <div class="item-rating-container">
+                  <div class="star-rating">
+                    <div class="stars-wrapper stars-inactive-wrapper">
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                    </div>
+                    <div class="stars-wrapper stars-active-wrapper">
+                      <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                    </div>
+                  </div>
+                  <div class="rating-count">
+                    <span>234</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-price-wrapper">
+                <span>From</span>
+                <div class="item-price-container">
+                  <div class="item-price">$99.00</div>
+                  <a class="link-out" href="#"
+                    ><img
+                      src="images/icon-link-out.svg"
+                      alt="link to outer page"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="new-products-item">
+            <div class="image-wrapper">
+              <img
+                src="images/shop-item-image7.jpg"
+                alt="4 flacons of skin care products"
+              />
+              <button class="cta-link button addcart">Add To Cart</button>
+            </div>
+            <div class="item-descr">
+              <div class="item-title-wrapper">
+                <div class="item-title">Face Wash</div>
+                <div class="item-rating-container">
+                  <div class="star-rating">
+                    <div class="stars-wrapper stars-inactive-wrapper">
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                    </div>
+                    <div class="stars-wrapper stars-active-wrapper">
+                      <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                    </div>
+                  </div>
+                  <div class="rating-count">
+                    <span>234</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-price-wrapper">
+                <span>From</span>
+                <div class="item-price-container">
+                  <div class="item-price">$75.00</div>
+                  <a class="link-out" href="#"
+                    ><img
+                      src="images/icon-link-out.svg"
+                      alt="link to outer page"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="new-products-item">
+            <div class="image-wrapper">
+              <img
+                src="images/shop-item-image8.jpg"
+                alt="4 flacons of skin care products"
+              />
+              <button class="cta-link button addcart">Add To Cart</button>
+            </div>
+            <div class="item-descr">
+              <div class="item-title-wrapper">
+                <div class="item-title">Hand Cream</div>
+                <div class="item-rating-container">
+                  <div class="star-rating">
+                    <div class="stars-wrapper stars-inactive-wrapper">
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                      <i class="star star-inactive"></i>
+                    </div>
+                    <div class="stars-wrapper stars-active-wrapper">
+                      <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                      <i class="star star-active"></i>
+                    </div>
+                  </div>
+                  <div class="rating-count">
+                    <span>234</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-price-wrapper">
+                <span>From</span>
+                <div class="item-price-container">
+                  <div class="item-price">$88.00</div>
+                  <a class="link-out" href="#"
+                    ><img
+                      src="images/icon-link-out.svg"
+                      alt="link to outer page"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking" id="booking">
+        <div class="grid-content col-2">
+          <div class="image-wrapper">
+            <img
+              src="images/woman-before-after.jpg"
+              alt="a woman with clean and acned face"
+            />
+            <span class="image-caption">After</span>
+            <span class="image-caption">Before</span>
+            <span class="image-caption"
+              >Safe & Effective Skin Treatement Solution</span
+            >
+          </div>
+          <div class="text-content-wrapper">
+            <div class="title-wrapper">
+              <h2 class="title title-h2">
+                book a skin treatment at the nearest skin studio to you
+              </h2>
+            </div>
+            <div class="textbox">
+              <p>
+                Trend sari minimalist sleeveless modern valuable. Halter
+                celebrities photography. Influence imprint replicate minimalist
+                apron imagination.
+              </p>
+            </div>
+            <a class="cta-link button" href="#">Shop Now &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="review" id="review">
+        <div class="title-wrapper">
+          <h2 class="title title-h2">What our customers say</h2>
+        </div>
+        <img
+          class="illustration"
+          src="images/testimonials-woman.jpg"
+          alt="woman with an orange mask on her face"
+        />
+        <img class="vector-decor" src="images/icon-quote.svg" alt="" />
+        <div class="textbox">
+          <p>
+            As noted above, ecommerce is the process of buying and selling
+            tangible products and services online. It involves more than one
+            party along with the exchange of data or currency to process a
+            transaction. It is part of the greater industry that is known as
+            electronic business (ebusiness), which involves all of the processes
+            required to run a company online
+          </p>
+        </div>
+        <div class="reviewer-info">
+          <div class="reviewer-name">MilanJack</div>
+          <div class="star-rating review-star-rating">
+            <div class="stars-wrapper stars-inactive-wrapper">
+              <i class="star star-inactive"></i>
+              <i class="star star-inactive"></i>
+              <i class="star star-inactive"></i>
+              <i class="star star-inactive"></i>
+              <i class="star star-inactive"></i>
+            </div>
+            <div class="stars-wrapper stars-active-wrapper">
+              <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
+              <i class="star star-active"></i>
+              <i class="star star-active"></i>
+              <i class="star star-active"></i>
+              <i class="star star-active"></i>
+              <i class="star star-active"></i>
+            </div>
+          </div>
+          <div>
+            <span>product manager</span>
+          </div>
+        </div>
+        <div class="review-pagination">
+          <div class="review-count">
+            <span>01</span>
+            <span>/</span>
+            <span>06</span>
+          </div>
+          <div class="review-controls">
+            <button class="review-arrow left">&larr;</button>
+            <button class="review-arrow right">&larr;</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="news" id="news">
       <div class="title-wrapper">
-        <h2 class="title title-h2">New Arrival Collection</h2>
+        <h2 class="title title-h2">Newsletter</h2>
       </div>
-      <div class="grid-content 3-col">
-        <div class="new-products-item">
-          <div class="image-wrapper">
-            <img
-              src="images/shop-item-image1.jpg"
-              alt="4 flacons of skin care products"
-            />
-          </div>
-          <div class="item-descr">
-            <div class="item-title-wrapper">
-              <div class="item-title">Skin Care</div>
-              <div class="item-rating-container">
-                <div class="star-rating">
-                  <div class="stars-inactive-wrapper">
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                  </div>
-                  <div class="stars-active-wrapper">
-                    <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                  </div>
-                </div>
-                <div class="rating-count">
-                  <span>234</span>
-                </div>
-              </div>
-            </div>
-            <div class="item-price-wrapper">
-              <span>From</span>
-              <div class="item-price-container">
-                <div class="item-price">$99.00</div>
-                <a class="link-out" href="#"
-                  ><img src="images/icon-link-out.svg" alt="link to outer page"
-                /></a>
-              </div>
-            </div>
-          </div>
+      <div>Subscribe to our latest news and information</div>
+      <form class="news-form" action="">
+        <input
+          class="email"
+          type="email"
+          name=""
+          id=""
+          placeholder="Enter your E-mail"
+        />
+        <button class="cta-link button" type="submit">Subscribe</button>
+      </form>
+      <div class="footer-navigation-container">
+        <div class="logo-wrapper">
+          <a href="#">
+            <img src="images/braVaa.svg" alt="company logo image" />
+          </a>
         </div>
-        <div class="new-products-item">
-          <div class="image-wrapper">
-            <img
-              src="images/shop-item-image2.jpg"
-              alt="4 flacons of skin care products"
-            />
-          </div>
-          <div class="item-descr">
-            <div class="item-title-wrapper">
-              <div class="item-title">Hair Care</div>
-              <div class="item-rating-container">
-                <div class="star-rating">
-                  <div class="stars-inactive-wrapper">
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                  </div>
-                  <div class="stars-active-wrapper">
-                    <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                  </div>
-                </div>
-                <div class="rating-count">
-                  <span>234</span>
-                </div>
-              </div>
-            </div>
-            <div class="item-price-wrapper">
-              <span>From</span>
-              <div class="item-price-container">
-                <div class="item-price">$75.00</div>
-                <a class="link-out" href="#"
-                  ><img src="images/icon-link-out.svg" alt="link to outer page"
-                /></a>
-              </div>
-            </div>
-          </div>
+        <nav class="footer-navigation">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Product</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="socials-container">
+        <div></div>
+        <div class="copyright-wrapper">
+          <a href="#">Terms of Use</a> | <a href="#">Privacy</a> ©
+          <span>Bra</span>Vaa, 2022. All rights reserved
         </div>
-        <div class="new-products-item">
-          <div class="image-wrapper">
-            <img
-              src="images/shop-item-image3.jpg"
-              alt="4 flacons of skin care products"
-            />
-          </div>
-          <div class="item-descr">
-            <div class="item-title-wrapper">
-              <div class="item-title">Facial Care</div>
-              <div class="item-rating-container">
-                <div class="star-rating">
-                  <div class="stars-inactive-wrapper">
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                  </div>
-                  <div class="stars-active-wrapper">
-                    <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                  </div>
-                </div>
-                <div class="rating-count">
-                  <span>234</span>
-                </div>
-              </div>
-            </div>
-            <div class="item-price-wrapper">
-              <span>From</span>
-              <div class="item-price-container">
-                <div class="item-price">$88.00</div>
-                <a class="link-out" href="#"
-                  ><img src="images/icon-link-out.svg" alt="link to outer page"
-                /></a>
-              </div>
-            </div>
-          </div>
+        <div class="social-icons-wrapper">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="images/icon-socials-facebook.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-socials-linkedin.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/icon-socials-twitter.svg" alt=""
+              /></a>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-
-    <section class="popular" id="popular">
-      <div class="title-wrapper">
-        <h2 class="title title-h2">Our Beautiful Products</h2>
-      </div>
-      <div class="grid-content 3-col">
-        <div class="new-products-item">
-          <div class="image-wrapper">
-            <img
-              src="images/shop-item-image4.jpg"
-              alt="4 flacons of skin care products"
-            />
-          </div>
-          <div class="item-descr">
-            <div class="item-title-wrapper">
-              <div class="item-title">Body Sprays</div>
-              <div class="item-rating-container">
-                <div class="star-rating">
-                  <div class="stars-inactive-wrapper">
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                  </div>
-                  <div class="stars-active-wrapper">
-                    <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                  </div>
-                </div>
-                <div class="rating-count">
-                  <span>234</span>
-                </div>
-              </div>
-            </div>
-            <div class="item-price-wrapper">
-              <span>From</span>
-              <div class="item-price-container">
-                <div class="item-price">$99.00</div>
-                <a class="link-out" href="#"
-                  ><img src="images/icon-link-out.svg" alt="link to outer page"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="new-products-item">
-          <div class="image-wrapper">
-            <img
-              src="images/shop-item-image5.jpg"
-              alt="4 flacons of skin care products"
-            />
-          </div>
-          <div class="item-descr">
-            <div class="item-title-wrapper">
-              <div class="item-title">Special Product</div>
-              <div class="item-rating-container">
-                <div class="star-rating">
-                  <div class="stars-inactive-wrapper">
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                  </div>
-                  <div class="stars-active-wrapper">
-                    <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                  </div>
-                </div>
-                <div class="rating-count">
-                  <span>234</span>
-                </div>
-              </div>
-            </div>
-            <div class="item-price-wrapper">
-              <span>From</span>
-              <div class="item-price-container">
-                <div class="item-price">$78.00</div>
-                <a class="link-out" href="#"
-                  ><img src="images/icon-link-out.svg" alt="link to outer page"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="new-products-item">
-          <div class="image-wrapper">
-            <img
-              src="images/shop-item-image6.jpg"
-              alt="4 flacons of skin care products"
-            />
-          </div>
-          <div class="item-descr">
-            <div class="item-title-wrapper">
-              <div class="item-title">Body Lotion</div>
-              <div class="item-rating-container">
-                <div class="star-rating">
-                  <div class="stars-inactive-wrapper">
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                  </div>
-                  <div class="stars-active-wrapper">
-                    <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                  </div>
-                </div>
-                <div class="rating-count">
-                  <span>234</span>
-                </div>
-              </div>
-            </div>
-            <div class="item-price-wrapper">
-              <span>From</span>
-              <div class="item-price-container">
-                <div class="item-price">$99.00</div>
-                <a class="link-out" href="#"
-                  ><img src="images/icon-link-out.svg" alt="link to outer page"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="new-products-item">
-          <div class="image-wrapper">
-            <img
-              src="images/shop-item-image7.jpg"
-              alt="4 flacons of skin care products"
-            />
-          </div>
-          <div class="item-descr">
-            <div class="item-title-wrapper">
-              <div class="item-title">Face Wash</div>
-              <div class="item-rating-container">
-                <div class="star-rating">
-                  <div class="stars-inactive-wrapper">
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                  </div>
-                  <div class="stars-active-wrapper">
-                    <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                  </div>
-                </div>
-                <div class="rating-count">
-                  <span>234</span>
-                </div>
-              </div>
-            </div>
-            <div class="item-price-wrapper">
-              <span>From</span>
-              <div class="item-price-container">
-                <div class="item-price">$75.00</div>
-                <a class="link-out" href="#"
-                  ><img src="images/icon-link-out.svg" alt="link to outer page"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="new-products-item">
-          <div class="image-wrapper">
-            <img
-              src="images/shop-item-image8.jpg"
-              alt="4 flacons of skin care products"
-            />
-          </div>
-          <div class="item-descr">
-            <div class="item-title-wrapper">
-              <div class="item-title">Hand Cream</div>
-              <div class="item-rating-container">
-                <div class="star-rating">
-                  <div class="stars-inactive-wrapper">
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                    <i class="star-inactive"></i>
-                  </div>
-                  <div class="stars-active-wrapper">
-                    <!--оверфлоу выставить хидден, звезды не сжимаются из-за уменьшения значения width-->
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                    <i class="star-active"></i>
-                  </div>
-                </div>
-                <div class="rating-count">
-                  <span>234</span>
-                </div>
-              </div>
-            </div>
-            <div class="item-price-wrapper">
-              <span>From</span>
-              <div class="item-price-container">
-                <div class="item-price">$88.00</div>
-                <a class="link-out" href="#"
-                  ><img src="images/icon-link-out.svg" alt="link to outer page"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="booking" id="booking">
-      <div class="grid-content 2-col"></div>
-    </section>
+    </footer>
   </body>
 </html>
