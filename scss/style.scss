@@ -4,7 +4,6 @@ $color-footer-bg: #04010e;
 $color-paragraph: #3d3d4e;
 $color-accent: #3BC7DA;
 
-
 @mixin mask-icon{
     display: block;
     mask-size: contain;
@@ -20,19 +19,22 @@ $color-accent: #3BC7DA;
     box-sizing: border-box;
 }
 
+
+html{
+    // font-size: 16px;
+    font-size: clamp(16px , 1.05vw, 21px);
+}
+
 body{
     margin: 0;
     padding: 0;
     font-family: 'Playfair Display', serif;
 }
 
-//font-family rules
-//--------------//
-// font-family: 'Playfair Display', serif;
-// font-family: 'PT Sans Narrow', sans-serif;
-// font-family: 'PT Serif', serif;
 
-ul{
+ul,
+ol,
+nav{
     list-style: none;
 }
 
@@ -41,30 +43,36 @@ a{
     text-decoration: none;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 
 h1{
     font-weight: 800;
-    font-size: 68px;
-    line-height: 80px;
+    font-size: 4.25em;
+    line-height: 1.25em;
 }
 
 h2, h3, h4, h5, h6{
     font-weight: 600;
-    font-size: 46px;
-    line-height: 56px;
+    font-size: 2.875em;
+    line-height: 1.25em;
 }
 
 .title-wrapper{
     display: block;
-    width: 100%;
     text-align: center;
+    width: 100%;
 }
 
 
 .textbox{
     color: $color-paragraph;
+    font-size: 1.2em;
     font-weight: 400;
-    font-size: 18px;
     line-height: 1.4;
 }
 
@@ -123,9 +131,12 @@ h2, h3, h4, h5, h6{
 }
 
 .wrapper{
-    max-width: 1160px;
+    max-width: 1200px;
+    padding: 0px 20px;
     margin: 0 auto;
 }
+
+
 
 
 // HEADER
@@ -173,7 +184,37 @@ h2, h3, h4, h5, h6{
 .top-interactive-menu{
     padding-left: 30px;
     gap: 30px;
+}
+
+
+
+.header .icon{
+    background-color: $color-titles;
+    width: 24px;
+    height: 24px;
+    @include mask-icon();
+
     
+    
+    &.arrow-icon{
+        mask-image: url(../images/icon-arrow-down.svg);
+        -webkit-mask-image: url(../images/icon-arrow-down.svg);
+        
+    }
+    
+    &.search-icon{
+        mask-image: url(../images/icon-search.svg);
+        -webkit-mask-image: url(../images/icon-search.svg);
+    
+    }
+    &.shopcart-icon{
+        mask-image: url(../images/shopping-bag.svg);
+        -webkit-mask-image: url(../images/shopping-bag.svg);
+    
+    }
+}
+
+.header{
     & button{
         font-size: inherit;
         font-family: inherit;
@@ -181,39 +222,91 @@ h2, h3, h4, h5, h6{
         background-color: transparent;
         cursor: pointer;
     }
-
+    
     & button:hover .icon{
         background-color: $color-accent;
     }
-
-    & .icon{
-        background-color: $color-titles;
-        width: 24px;
-        height: 24px;
-        @include mask-icon();
-    }
-    
-    & .arrow-icon{
-        mask-image: url(../images/icon-arrow-down.svg);
-        -webkit-mask-image: url(../images/icon-arrow-down.svg);
-        
-    }
-    
-    & .search-icon{
-        mask-image: url(../images/icon-search.svg);
-        -webkit-mask-image: url(../images/icon-search.svg);
-
-    }
-    & .shopcart-icon{
-        mask-image: url(../images/shopping-bag.svg);
-        -webkit-mask-image: url(../images/shopping-bag.svg);
-
-    }
 }
+
 
 .topnav-menu a:hover{
     color: $color-accent;
 }
+
+
+
+.modal-container{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    padding: 50px 20px 0px;
+    z-index: 10;
+}
+
+.modal-container.active{
+    display: block;
+    animation: 0.3s ease fade;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.modal-inner{
+    background-color: #fff;
+    max-width: 500px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 4px 12px rgba($color: #000000, $alpha: 0.2);
+    padding: 30px 0px;
+
+    & nav ul > *{
+        margin-bottom: 20px;
+    }
+    
+}
+
+.header .modal-close-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 600;
+    color: $color-paragraph;
+    cursor: pointer;
+}
+
+
+
+
+.header .modal-control{
+    background-color: black;
+    mask-image: url(../images/menu-burger-horizontal-svgrepo-com.svg);
+    -webkit-mask-image: url(../images/menu-burger-horizontal-svgrepo-com.svg);
+    @include mask-icon();
+    width: 32px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
 
 //PROMO-SCREEN
 
@@ -237,6 +330,10 @@ h2, h3, h4, h5, h6{
     }
 }
 
+.promo-screen .title-h1 img{
+    display: inline-block;
+}
+
 //PARTNERS
 
 .partners{
@@ -255,6 +352,7 @@ h2, h3, h4, h5, h6{
 
 .partners-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 25px;
 }
@@ -336,11 +434,11 @@ h2, h3, h4, h5, h6{
 .grid-content{
     display: grid;
 
-    &.col-2{
+    &.split{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    &.col-3{
+    &.products{
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -548,19 +646,20 @@ h2, h3, h4, h5, h6{
 .review-content{
     display: flex;
     justify-content: space-between;
-    gap: 90px;
+    gap: 2em;
     height: max-content;
 }
 
 
 .review .title-wrapper{
-    text-align-last: left;
+    text-align: left;
     margin-bottom: 50px;
 }
 
 
 .review .illustration{
-    display: block;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .review .textbox{
@@ -648,7 +747,7 @@ h2, h3, h4, h5, h6{
     background-color: $color-footer-bg;
     clear: both;
     color: white;
-    padding: 60px 200px 45px;
+    padding: 60px 20% 45px;
 
     display: flex;
     flex-direction: column;
@@ -702,8 +801,14 @@ h2, h3, h4, h5, h6{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
     width: 100%;
     margin-bottom: 120px;
+
+    & .logo-wrapper{
+        flex: 1 0 auto;
+    }
 
     & .footer-navigation ul{
         display: flex;
@@ -754,3 +859,5 @@ h2, h3, h4, h5, h6{
         }
     }
 }
+
+@import 'media-queries.scss';

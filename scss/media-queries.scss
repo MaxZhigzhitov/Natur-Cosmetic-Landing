@@ -1,0 +1,131 @@
+@media screen and (max-width: 767px) {
+    
+
+    
+
+    .booking{
+        background-image: none;
+    }
+
+    .review-content{
+        gap: 1em;
+
+        & .illustration{
+            width: 250px;
+            object-position: top;
+        }
+    }
+
+    .topnav-menu,
+    .top-interactive-menu{
+        display: none;
+    }
+
+
+    .header .modal-control{
+        display: block;
+    }
+
+    .news .socials-container{
+        flex-wrap: wrap;
+        gap: 35px;
+
+        & > *{
+            flex: 1 1 auto;
+        }
+
+        & .copyright-wrapper{
+            flex: 1 1 auto;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .grid-content{
+
+        &.split{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        &.products{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .news{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .news .footer-navigation-container{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+
+        & .logo-wrapper{
+            margin-bottom: 30px;
+        }
+
+        & .footer-navigation ul{
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .title-h1{
+        font-size: 3.25em;
+    }
+    
+    .grid-content{
+        &.products{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .review-content{
+        flex-direction: column;
+    }
+
+    
+
+    .news .news-form{
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 960px) {
+    .booking{
+        background-image: none;
+    }
+
+    .booking .grid-content.split{
+        display: flex;
+            flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .promo-screen{
+        background-image: none;
+    }
+
+    .promo-screen-content{
+        display: flex;
+        flex-direction: column;
+        gap: 25px 0px;
+        padding-left: 0;
+    }
+}
